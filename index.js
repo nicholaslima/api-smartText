@@ -21,6 +21,6 @@ app.use(error);
 const PORT = process.env.PORT;
 
 
-app.listen(PORT, () => {
+app.listen(PORT || 3333, () => {
     console.log('server is runing')
 });
