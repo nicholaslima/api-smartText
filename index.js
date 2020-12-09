@@ -1,6 +1,7 @@
 
 
 require('express-async-errors');
+require('dotenv').config();
 
 const express = require('express');
 const error = require('./src/middleware/MiddlewareErrors');
@@ -16,6 +17,10 @@ app.use(express.json());
 app.use(route);
 app.use(error);
 
-app.listen(3333, () => {
+
+const PORT = process.env.PORT;
+
+
+app.listen(PORT, () => {
     console.log('server is runing')
 });
